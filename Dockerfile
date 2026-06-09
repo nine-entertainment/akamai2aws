@@ -12,7 +12,7 @@ ENV GOARCH=amd64
 RUN go build -o /go/src/akamai-ip-range/akamai2aws /go/src/akamai-ip-range/app.go
 
 # final image
-FROM alpine:3.18
+FROM alpine:3.24
 ARG CA_CERTS_VERSION="20171114-r3"
 ARG BASH_VERSION="4.4.19-r1"
 RUN apk add bash=${BASH_VERSION} ca-certificates=${CA_CERTS_VERSION} --no-cache
